@@ -1,3 +1,4 @@
+
 from datetime import datetime, timedelta, timezone
 
 import pytest
@@ -5,6 +6,7 @@ import pytest
 from nexora.auth import (
     AccountLockedError,
     AuthService,
+    EmailAlreadyRegisteredError,
     InvalidCredentialsError,
     ValidationError,
 )
@@ -113,3 +115,9 @@ def test_t6_senha_curta_e_rejeitada_no_cadastro(service):
     assert total == 0
 
     service.register(EMAIL, "12345678")  # exatamente 8 é aceita
+
+
+def test_email_duplicado_e_rejeitado(service):
+    service.register(EMAIL, SENHA)
+    with pytest.raises(EmailAlreadyRegisteredError):
+        service.register(EMAIL, SENHA)
