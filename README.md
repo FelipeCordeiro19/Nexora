@@ -1,6 +1,6 @@
 # Nexora
 
-O Nexora é uma plataforma digital de produtividade pessoal que permite aos usuários criar contas, acessar seus ambientes individuais e organizar tarefas, projetos e objetivos em um único lugar.
+O Nexora é uma plataforma digital de produtividade pessoal que permite aos usuários criar contas, acessar seus ambientes individuais e organizar tarefas, projetos e objetivos em um único lugar!
 
 Esta Sprint 1 entrega a funcionalidade de **login**: cadastro de usuário, autenticação, validação de e-mail, senha mínima e bloqueio de conta após tentativas erradas. O projeto é uma aplicação de linha de comando em Python, com testes automatizados.
 
